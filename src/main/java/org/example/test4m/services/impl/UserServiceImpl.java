@@ -3,6 +3,7 @@ package org.example.test4m.services.impl;
 import lombok.RequiredArgsConstructor;
 import org.example.test4m.entity.User;
 import org.example.test4m.repositories.InMemoryUserRepository;
+import org.example.test4m.repositories.UserRepository;
 import org.example.test4m.services.UserService;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-    private final InMemoryUserRepository inMemoryUserRepository;
+    private final UserRepository inMemoryUserRepository;
 
     @Override
     public List<User> getAllUsers() {
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getUserByName(String name) {
-        return inMemoryUserRepository.findByUsername(name);
+        return null;
     }
 
     @Override

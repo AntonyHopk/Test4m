@@ -1,0 +1,8 @@
+CREATE SCHEMA IF NOT EXISTS test ;
+
+CREATE TABLE IF NOT EXISTS test.users(
+    id SERIAL PRIMARY KEY,
+    c_name VARCHAR(50) NOT NULL,
+    c_age INTEGER NOT NULL CHECK ( c_age <100 ),
+    c_city VARCHAR(50)
+);
